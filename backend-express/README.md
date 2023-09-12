@@ -10,6 +10,7 @@ A Node.js Express Web application that uses the mqtt.js
 API_URL={API_URL}
 Token={Token}
 MQTT_HOST_NAME={MQTT_HOST_NAME}
+MQTT_PORT={MQTT_PORT}
 
 ```
 

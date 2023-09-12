@@ -2,9 +2,10 @@ const mqttService = require("../service/mqttService");
 
 // get MQTT HOST Name
 const MQTT_HOST_NAME = process.env.MQTT_HOST_NAME;
+const MQTT_PORT = process.env.MQTT_PORT
 
 // Try to connect to mqtt server
-var mqttClient = new mqttService('mqtt://' + MQTT_HOST_NAME);
+var mqttClient = new mqttService(`mqtt://${MQTT_HOST_NAME}:${MQTT_PORT}`);
 mqttClient.connect();
 
 
