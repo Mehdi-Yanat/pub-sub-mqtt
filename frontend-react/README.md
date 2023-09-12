@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+1. Create a `.env` file at the root of the project with the following properties:
+
+```
+REACT_APP_API_URL={REACT_APP_API_URL}
+REACT_APP_HOSTMQTT={REACT_APP_HOSTMQTT}
+REACT_APP_PORTMQTT={REACT_APP_PORTMQTT}
+REACT_APP_TOKEN={REACT_APP_TOKEN}
+
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
