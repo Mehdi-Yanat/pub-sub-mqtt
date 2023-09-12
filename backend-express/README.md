@@ -28,20 +28,23 @@ MQTT_HOST_NAME={MQTT_HOST_NAME}
 
 ```
 presence_payload
- {
-    "type": 4,
-    "payload": {
-    "presenceDetected": true,
-    "presenceTargetType": 0,
-    "roomPresenceIndication": 0,
-    "timestamp": 0,
-    "eventId": "string",
-    "timestampStr": "string",
-    "deviceId": "string",
-    "extra": "string",
-    "timestampMillis": 0,
-    "trackerTargets": [],
-    "presenceRegionMap": {}
+{
+  "topic": "/test/:deviceId/events",
+    "message": {
+        "type": 4,
+        "payload": {
+            "presenceDetected": true,
+            "presenceTargetType": 0,
+            "roomPresenceIndication": 1,
+            "timestamp": 0,
+            "eventId": "string",
+            "timestampStr": "string",
+            "deviceId": "/test/:deviceId/events",
+            "extra": "string",
+            "timestampMillis": 0,
+            "trackerTargets": [""],
+            "presenceRegionMap": {}
+        }
     }
 } 
 ```
@@ -50,25 +53,28 @@ presence_payload
 ```
 fall_payload
  {
-    "type": 5,
-    "payload": {
-    "timestamp": 0,
-    "statusUpdateTimestamp": 0,
-    "status": "fall_detected", //fall_exit,
-    "type": "string",
-    "deviceId": "string",
-    "endTimestamp": 0,
-    "isSimulated": true,
-    "exitReason": "string",
-    "isLearning": true,
-    "extra": "string",
-    "isSilent": true,
-    "fallLocX_cm": 0,
-    "fallLocY_cm": 0,
-    "fallLocZ_cm": 0,
-    "tarHeightEst": 0,
-    "idOfTrigger": "string"
-    }
+  "topic": "/test/:deviceId/events",
+    "message": {
+        "type": 5,
+        "payload": {
+            "timestamp": 0,
+            "statusUpdateTimestamp": 0,
+            "status": "fall_detected", //fall_exit,
+            "type": "string",
+            "deviceId": "/test/:deviceId/events",
+            "endTimestamp": 0,
+            "isSimulated": true,
+            "exitReason": "string",
+            "isLearning": true,
+            "extra": "string",
+            "isSilent": true,
+            "fallLocX_cm": 0,
+            "fallLocY_cm": 0,
+            "fallLocZ_cm": 0,
+            "tarHeightEst": 0,
+            "idOfTrigger": "string"
+        }
+   }
 }
 ```
 
