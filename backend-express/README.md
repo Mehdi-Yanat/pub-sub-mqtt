@@ -26,8 +26,9 @@ MQTT_HOST_NAME={MQTT_HOST_NAME}
 - `Method: POST`
 - `JSON example:`
 
+
+-presence_payload
 ```
-presence_payload
 {
   "topic": "/test/:deviceId/events",
     "message": {
@@ -49,9 +50,8 @@ presence_payload
 } 
 ```
 
-
+-fall_payload
 ```
-fall_payload
  {
   "topic": "/test/:deviceId/events",
     "message": {
