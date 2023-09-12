@@ -23,6 +23,7 @@ MQTT_HOST_NAME={MQTT_HOST_NAME}
 
 - `/localhost:3500/api/publish` 
 - `Content-Type: application/json`
+- `Method: POST`
 - `JSON example:`
 
 ```
