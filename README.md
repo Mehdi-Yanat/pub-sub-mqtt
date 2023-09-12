@@ -38,6 +38,6 @@ Before you begin, ensure you have the following prerequisites installed on your 
 - Build and run Docker containers to ensure the application works as expected within a Docker environment.
 
 
-5. Conclusion
+### Conclusion
 
-- This README provides instructions for completing the MQTT Pub/Sub with Docker technical test. Ensure you follow the steps and requirements provided by the hiring company. If you encounter any issues or have questions, please reach out to the test administrator for assistance.
+- This README provides instructions for completing the MQTT Pub/Sub with Docker technical test. 
