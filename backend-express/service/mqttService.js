@@ -1,5 +1,6 @@
 const mqtt = require("mqtt");
 
+// init mqtt class
 class MQTTService {
   constructor(host, messageCallback) {
     this.mqttClient = null;
@@ -7,6 +8,7 @@ class MQTTService {
     this.messageCallback = messageCallback;
   }
 
+  // connect 
   connect() {
     this.mqttClient = mqtt.connect(this.host);
 

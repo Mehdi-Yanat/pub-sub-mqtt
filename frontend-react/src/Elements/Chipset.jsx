@@ -13,8 +13,8 @@ function Chipset({ device, mqttClient, setMqttClient }) {
 
         const conectBroker = () => {
             const serialProduct = device.serialProduct
-
-            const client = new Client(process.env.REACT_APP_HOSTMQTT, Number(process.env.REACT_APP_PORTMQTT), serialProduct)
+            const mqttUri = `ws://${process.env.REACT_APP_HOSTMQTT}:${process.env.REACT_APP_PORTMQTT}/mqtt`;
+            const client = new Client(mqttUri, serialProduct)
 
             if (!device._id) {
                 client.disconnect();
@@ -58,7 +58,7 @@ function Chipset({ device, mqttClient, setMqttClient }) {
 
         conectBroker()
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [device._id])
 
 

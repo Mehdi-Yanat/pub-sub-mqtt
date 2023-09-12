@@ -1,13 +1,17 @@
 const mqttService = require("../service/mqttService");
 
+// get MQTT HOST Name
 const MQTT_HOST_NAME = process.env.MQTT_HOST_NAME;
 
-var mqttClient = new mqttService(MQTT_HOST_NAME);
+// Try to connect to mqtt server
+var mqttClient = new mqttService('mqtt://' + MQTT_HOST_NAME);
 mqttClient.connect();
 
+
+// publish messages
 exports.pubMQTTMessage = async function (req, res) {
   try {
-    const {topic , message} = req.body;
+    const { topic, message } = req.body;
 
     console.log(`Request Topic : ${topic}`);
     console.log(`Request Message : ${message}`);
