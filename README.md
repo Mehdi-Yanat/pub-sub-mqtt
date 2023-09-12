@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Welcome to the technical test for MQTT publishing (pub) and subscribing (sub) with Docker. Please follow these instructions to complete the test:
+Welcome to the technical test for MQTT publishing (pub) and subscribing (sub) with Docker. Please follow these instructions
 
 ### Prerequisites
 
@@ -27,8 +27,6 @@ Before you begin, ensure you have the following prerequisites installed on your 
     npm install
 
 3. Configure MQTT Broker
-
-- In the provided source code or configuration, specify the connection details for the MQTT broker (e.g., server address, port, credentials).
 
 
 4. Docker Integration

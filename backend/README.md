@@ -29,6 +29,7 @@ MQTT_PORT={MQTT_PORT}
 
 
 -presence_payload
+
 ```
 {
   "topic": "/test/:deviceId/events",
@@ -52,6 +53,7 @@ MQTT_PORT={MQTT_PORT}
 ```
 
 -fall_payload
+
 ```
  {
   "topic": "/test/:deviceId/events",
@@ -77,5 +79,6 @@ MQTT_PORT={MQTT_PORT}
         }
    }
 }
+
 ```
 
