@@ -33,11 +33,9 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
 4. Docker Integration
 
-- Create a Dockerfile or Docker Compose configuration (if not provided) to containerize your MQTT-based application.
-
 - Build and run Docker containers to ensure the application works as expected within a Docker environment.
 
 
 ### Conclusion
 
-- This README provides instructions for completing the MQTT Pub/Sub with Docker technical test. 
+- This README provides instructions for completing the MQTT Pub/Sub with Docker technical test.
