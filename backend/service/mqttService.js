@@ -29,6 +29,7 @@ class MQTTService {
       if (this.messageCallback) this.messageCallback(topic, message);
     });
 
+    // Call on close event
     this.mqttClient.on("close", () => {
       console.log(`MQTT client disconnected`);
     });

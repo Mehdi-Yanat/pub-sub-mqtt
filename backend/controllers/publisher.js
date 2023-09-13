@@ -17,6 +17,7 @@ exports.pubMQTTMessage = async function (req, res) {
     console.log(`Request Topic : ${topic}`);
     console.log(`Request Message : ${message}`);
 
+    // publish message
     mqttClient.publish(topic, JSON.stringify(message), {});
     res
       .status(200)

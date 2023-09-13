@@ -6,11 +6,11 @@ function Chipset({ device, mqttClient, setMqttClient }) {
 
     const [devicePayLoad, setDevicePayload] = useState({});
 
-
     useEffect(() => {
 
-        const MQTT_TOPIC = `/test/${device._id}/events`; // Replace with the MQTT topic you want to subscribe to
+        const MQTT_TOPIC = `/test/${device._id}/events`; // Replace with the MQTT topic you want to subscribe to change device id
 
+        // connect to broker
         const conectBroker = () => {
             const serialProduct = device.serialProduct
             const mqttUri = `ws://${process.env.REACT_APP_HOSTMQTT}:${process.env.REACT_APP_PORTMQTT}/mqtt`;
@@ -20,12 +20,14 @@ function Chipset({ device, mqttClient, setMqttClient }) {
                 client.disconnect();
             }
 
+            // call onConnectLost handle
             client.onConnectionLost = (responseObject) => {
                 if (responseObject.errorCode !== 0) {
                     console.log(`Connection lost: ${responseObject.errorMessage}`);
                 }
             };
 
+            // call onMessageArrived handle
             client.onMessageArrived = (message) => {
                 console.log(`Received message on topic ${message.destinationName}: ${message.payloadString}`);
                 setDevicePayload(JSON.parse(message.payloadString))
@@ -62,6 +64,7 @@ function Chipset({ device, mqttClient, setMqttClient }) {
     }, [device._id])
 
 
+    // actual presence check for devices presence 
     function actual_presence(presence_payload) {
         return (
             presence_payload?.presenceDetected &&

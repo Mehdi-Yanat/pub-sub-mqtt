@@ -10,12 +10,15 @@ app.use(express.urlencoded({ extended: true }));
 //routes
 const publisherRouter = require("./routes/publisher");
 
+// set route 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Health check");
 });
 
+// publish route
 app.use("/api/publish", publisherRouter);
 
+// listen app
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });

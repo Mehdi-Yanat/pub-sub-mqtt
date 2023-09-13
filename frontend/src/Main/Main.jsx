@@ -10,8 +10,7 @@ function Main({ rooms }) {
     const [mqttClient, setMqttClient] = useState(null);
     const [roomData, setRoom] = useState({})
 
-    console.log(mqttClient);
-
+    // subscribe button logic
     const subscribeHandler = (room) => {
         if (Object.keys(roomData).length) {
             setRoom({})
